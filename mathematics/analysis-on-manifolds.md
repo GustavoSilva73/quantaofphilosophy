@@ -1,2 +1,0 @@
-# Analysis on Manifolds
-
