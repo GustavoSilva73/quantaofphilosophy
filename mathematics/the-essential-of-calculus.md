@@ -1,2 +1,0 @@
-# The Essential of Calculus
-
