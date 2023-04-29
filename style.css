@@ -104,9 +104,10 @@ main {
 
 section {
     position: relative;
+    overflow-x: hidden;
     height: 85vh;
     background-color: #5b5b65;
-    overflow-x: hidden;
+
 }
 
 #frontcover {
