@@ -195,3 +195,44 @@ footer {
 .footer_list ul li a:hover {
     opacity: 1;
 }
+
+/* Blog */
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+
+.blog-box {
+    width: 350px;
+    background-color: #23232e;
+    border: 1px solid #5b5b65;
+}
+
+.blog-img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.blog-text {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-text span{
+    color: #fff;
+    font-size: 1em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
