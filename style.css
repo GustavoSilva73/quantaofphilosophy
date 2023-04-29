@@ -109,6 +109,11 @@ section {
     overflow-x: hidden;
 }
 
+#frontcover {
+    display: flex;
+    width: fit-content;
+}
+
 .sec h1 {
     font-size: 3.5em;
     margin-bottom: 15px;
