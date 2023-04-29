@@ -121,3 +121,77 @@ section {
     color: #fff;    
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+/*Footer*/
+
+footer {
+    width: 100%;
+    color: #fff;
+    background-color: #23232e;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#footer_content {
+    background-color: #5b5b65;
+    display: grid;
+    padding: 3rem 3.5rem;
+}
+
+#footer-contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#social_media {
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+#social_media .footer_link {
+    display: grid;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: #eeeae7;
+}
+
+#social_media a i{
+    font-size: 1.25em;
+    color: #23232e;
+    opacity: 0.9;
+}
+
+#social_media a:hover {
+    background-color: #23232e;
+    transition: 0.5s;
+}
+
+#social_media a:hover i{
+    background-color: #eeeae7;
+    transition: 0.5s;
+}
+
+.footer_list {
+    margin: 30px 0;
+}
+
+.footer_list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer_list ul li a{
+    color: #eeeae7;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footer_list ul li a:hover {
+    opacity: 1;
+}
