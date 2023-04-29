@@ -81,6 +81,8 @@ nav {
 
 main {
     background-color: #262631;
+    background-size: cover;
+    height: 91vh;
 }
 
 @keyframes navLinkFade {
