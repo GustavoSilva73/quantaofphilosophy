@@ -137,6 +137,12 @@ footer {
     padding: 3rem 3.5rem;
 }
 
+#footer-contacts {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
 #footer-contacts h1 {
     margin-bottom: 0.75rem;
 }
