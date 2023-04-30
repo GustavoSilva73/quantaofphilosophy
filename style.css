@@ -209,6 +209,32 @@ footer {
 
 /* Blog */
 
+#blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid #262631;
+}
+
+.blog-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blog-heading span {
+    color: #23232e;
+    font-size: 28px;
+}
+
+.blog-heading h3 {
+    color: #eeeae7;
+    font-size: 48px;
+}
+
 .blog-container {
     display: flex;
     justify-content: center;
@@ -219,7 +245,7 @@ footer {
 
 .blog-box {
     width: 350px;
-    background-color: #5b5b65;
+    background-color: #23232e;
     border: 1px solid #5b5b65;
 }
 
@@ -242,8 +268,44 @@ footer {
     flex-direction: column;
 }
 
+.blog-text .blog-title {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #eeeae7;
+}
+
+.bloh-text .blog-title:hover {
+    color: #5b5b65;
+    transition: all ease 0.3s;
+}
+
+.blog-text p {
+    color: #fff;
+    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    margin: 20px 0;
+}
+
+.blog-text a {
+    color: #5b5b65;
+}
+
+.blog-text a:hover {
+    color: #23232e;
+    transition: all ease 0.3s;
+}
+
 .blog-text span{
     color: #fff;
     font-size: 1em;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.blog-box {
+    width: 350px;
+    background-color: #23232e;
+    margin: 20px;
 }
