@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<html lang="pt-br">
+    <head>
+    <meta charset="uft-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+            <a class="logo" href="/">A Quanta of Philosophy</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="/">Sobre Mim</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="/">Projetos</a></li>
+                <li><a href="/">Pesquisa</a></li>
+            </ul>
+        "</nav>
+        <section>
+            <img src="img/Screenshot_135.png" id="frontcover">
+        </section>
+    </header> 
+
+    <main>
+        <div id="blog-posts">
+        <h1>Desmistificando a Mecânica Quântica - Entrelaçamento Quântico </h1>
+        <p>A mecânica quântica é o campo da física responsável pelo estudo da realidade material em escalas atômicas e subatômicas. Surgem, atrelados intrinsecamente a seu advento, novos e instigantes conceitos, estes que muitas vezes tornam seu entendimento pouco intuitivo. Essa contra-intuitividade da teoria acentua-se com o publico com pouco ou nenhum background em matemática e, principalmente, sem uma sólida base em  física teórica. Isso — em consonância com os mais diversos fatores, sejam eles sociais, culturais, cognitivos e etc. — ajuda a criar uma mistificação da mecânica quântica por este mesmo publico, o que, por sua vez, abre espaço não só para um mal entendimento desse campo cientifico, como também para a criação de algumas pseudociências — que constituem o famoso misticismo quântico — e que muitas vezes mostram-se prejudiciais a seus adeptos. Por estes motivos, pretendo usar este espaço para desmistificar e explicar alguns conceitos e fenômenos da mecânica quântica, a começar pelo entrelaçamento quântico. Aqui, pretendo introduzir de forma concisa sua definição formal pra explicar do que este de fato se trata e também desmistificar alguns mal entendidos à seu respeito.</p>
+        <h2>Prelúdio Matemático</h2>
+        <p>Grosso modo, na mecânica quântica os estados \(\psi\) que descrevem um sistema quântico tratam-se de funções mensuráveis que pertencem ao espaço de Hilbert \(\mathcal{H}\) associado aquele sistema, o que faz com que, matematicamente, este seja um campo da física que se fundamente na teoria da medida e, principalmente, na álgebra linear. Com efeito, faz-se necessario um bom conhecimento destes dois campos da matemática para um bom entendimento da teoria quântica e, por isso, pretendo usar esta parte inicial de nossa discussão para introduzir formalmente os principais conceitos de interesse destes campos, onde, inicialmente,  definirei do que tratam-se os espaços de Hilbert no contexto da álgebra linear e logo após estabelecerei uma ponte com a teoria da medida. Isso posto, comecemos definindo dois conceitos fundamentais da álgebra linear, a saber, o de um espaço vetorial linear: </p>
+
+        <div class="math">
+            <p>
+                <b> Definição (Espaço Vetorial):</b> seja  \(\mathbb{F}\) um corpo e \(X \subset \mathbb{F}\) um conjunto qualquer. Se \(X\) for munido das operações \(+: X \times X \rightarrow X\) e \(\cdot : X \times \mathbb{F} \rightarrow X\) e se satisfazer
+            </p>
+    
+            <p>\(\bullet\) \(v + u = u + v\)</p>
+            <p>\(\bullet\) \( (u + v) + w = u + (v + w)\)</p>
+            <p>\(\bullet\) \(\exists \; 0 \in X\) tal que \(0 + v = v\)</p>
+            <p>\(\bullet\) \(\exists \;(-v) \in X\) tal que \((-v) + v = 0\)</p>
+            <p>\(\bullet\) \(\exists \; 1 \in \mathbb{F}\) tal que \(1 \cdot v = v\)</p>
+            <p>\(\bullet\) \(\alpha (\beta v) = (\alpha \beta) v\)</p>
+            <p>\(\bullet\) \( (\alpha + \beta) v = \alpha v + \beta v\)</p>
+            <p>\(\bullet\) \(\alpha (v + u) = \alpha v + \alpha u\)</p>
+
+            <p>para todo \(\alpha, \beta \in \mathbb{F} \) e \(u,v,w \in X\), então dizemos que \(X\) trata-se de um espaço vetorial sobre \(\mathbb{F}\).</p>
+        </div>
+        <p>E o de produto interno:</p>
+        <div class="math">
+            <p><b>Definição (Produto Interno):</b> Seja \(X\) um espaço vetorial sobre o corpo \(\mathbb{F}\). Definimos um produto interno em \(X\) como a aplicação \( \langle \cdot, \cdot \rangle : X \times X \rightarrow \mathbb{F} \), tal que</p>
+
+            <p>\(\bullet\) \( \langle u + v, w \rangle = \langle u, w \rangle + \langle v, w \rangle\)</p>
+            <p>\(\bullet\) \( \langle \alpha u, v \rangle = \alpha \langle u, v \rangle \)</p>
+            <p>\(\bullet\) \( \langle u , v \rangle = \langle v, u \rangle^*\)</p>
+            <p>\(\bullet\) \( \langle u , u \rangle > 0\) para todo \(u \neq 0\)</p>
+
+            <p>para todo \(u,v,w \in X\) e \(\alpha \in \mathbb{F}\).</p>
+        </div>
+        
+        <p>Dizemos que a função \(|| \cdot ||_p: X \rightarrow \mathbb{R}\), definida como \(||v||_p = (\braket{v,v})^\frac{1}{p}\), trata-se da normal induzida pelo produto interno \(\braket{\cdot, \cdot}\). Na mecânica quântica, em particular, denotamos os vetores \(v\) de \(X\) (que denotam os estados puros de nossos sistemas) usando a notação dos kets, e.g. \(\ket{\psi}\) — sendo \(\psi\) a função de onda, que detalharemos no que segue —, e tomamos o conjunto dos números complexos \(\mathbb{C}^n\) como o corpo usado para a construção de nossos espaços vetoriais de interesse. Consequentemente, complexos conjugados dos vetores utilizados serão introduzidos de forma natural  no decorrer de nosso estudo e, portanto, a introdução do conceito de espaço dual faz-se importante:<p>
+
+            <div class="math">
+                <p><b>Definição (Espaço Dual):</b>  considere \(X\) um espaço vetorial qualquer. O espaço dual de \(X\), denotado por \(X^*\), é definido como espaço linear de mapas \(\varphi: X \rightarrow \mathbb{F}\)</p>
+            </div>
+
+        <p>Comumente nos referimos aos elementos do espaço dual usando a notação dos bras, e.g.\(\bra{\psi}\), e como trabalhamos com espaços que possuem um produto interno bem definido, definimos estes espaços usando este mesmo produto interno, dado explicitamente por
+            \[ \braket{f,g} \doteq \int_X f (x)g^*(x) d \mu (x), \]
+         de modo que \(\braket{\varphi, \;}: \ket{\psi} \mapsto \braket{\varphi,\psi}\). Feito este adendo, estamos aptos a introduzir um elemento de grande importância associado diretamente aos espaços lineares: as bases — em particular, as bases ortonormais —, que são definidas como:</p>
+        <div class="math">
+            <p><b>Definição (Bases Ortonormais):</b> considere \(X\) um espaço vetorial com produto interno e um conjunto \(\{\ket{i}\}_{i \in [1,N]}\) de vetores linearmente independentes, onde \(\ket{v_i} \in X\) para todo \(i \in [1,N]\). Se \(\dim(X) = N\), então dizemos que \(\{\ket{i}\}_{i \in [1,N]}\) forma uma base para \(X\). Ademais, se \(\langle i , j \rangle = \delta_{ij}\) e \(\sqrt{\langle i,i\rangle} = 1\), para todo \(\ket{i}, \ket{j} \in X\), então dizemos que nossa base é ortonormal.</p>
+        </div>
+        <p>É a partir deste conceito matemático que surge a propriedade de superposição de nossos sistemas, dado que os possiveis estados de um sistema quântico são ortonormais e linearmente independentes. Para entender isto considere \(\{\phi_i\}_{i \in \mathbb{N}}\) como uma família de possiveis estados (puros) de um dado sistema, i.e. um conjunto de vetores que forma uma base ortonormal em nosso espaço de Hilbert associado. Assim, podemos construir o estado (também puro) deste mesmo sistema como uma combinação linear destes estados no espaço de Hilbert à este sistema associado, denotado pelo vetor \(\ket{\psi} = \sum_{i \in \mathbb{N}} c_i \ket{\Phi_i}\), i.e. como uma superposição dos estados \( \phi_i \). Outro conceito da álgebra linear de suma importância para o estudo formal da mecânica quântica tratam-se dos operadores lineares e dos autovalores e dos autovetores à eles associados, definidos como:</p>
+
+        \<div class="math">
+            <p><b>Definição (Operadores Lineares)</b>: definimos um operador linear como a função \(\hat{T}:X \rightarrow X\), tal que \(\hat{T}(\alpha v + \beta u) = \alpha \hat{T}(v) + \beta \hat{T}(u)\), para todo \(\alpha, \beta \in \mathbb{F}\) e \(u,v \in X\). Ademais, dizemos que \(\lambda \in \mathbb{F}\) e \(v \in X\) tratam-se de um autovalor e de um autovetor, respectivamente, de \(\hat{T}\) se \(\hat{T} v = \lambda v\).</p>
+        </div>
+
+
+        <p>Isso se deve ao fato das quantidades observáveis (mensuráveis), tais como momento e posição, serem descritas por estes objetos matemáticos. Em particular, dizemos que cada quantidade física mensurável esta associada a um operador hermitiano, que tratam-se de um caso especial de operador lineares e sao tais que \(\hat{T}^* = \hat{T}\) e cujo autovalores associados são numeros reais. Agora introduziremos o conceito de espacos normados:</p>
+
+        <div class="math">
+            <p><b>Definição (Espaço Normado):</b> dizemos que um espaço linear \(X\) sobre um corpo \(\mathbb{F}\) equipado com a função \(x \mapsto ||x||_k\) é normado se, e somente se,  i. \(||v||_k = 0 \Leftrightarrow v = 0\), ii. \(||\alpha v|| = \alpha ||x||\), para todo \(\alpha \in \mathbb{R}\) e para todo \(v \in X\) e iii. $=\(||u + v||_k \leq ||u||_k + ||v||_k\)  para todo \(u,b \in X\).</p>
+        </div>
+
+        <p>Isso permite que os espacos de Hilbert sejam finalmente e formalmente introduzidos:</p>
+
+        <div class="math">
+            <p><b>Definição (Espaço de Hilbert):</b> dizemos que um espaço \(X\) com produto interno que é completo pela norma induzida pelo produto interno, i.e. um espaço normado, trata-se de um espaço de Hilbert. Aqui iremos nos referir a estes espacos por \(\mathcal{H}\).</p>
+        </div>
+
+        <p>Feita essa introdução inicial dos espacos de Hilbert, agora podemos iniciar nossa discussão a respeito dos espaços de medida:</p>
+
+        <div class="math">
+            <p><b>Definição (Espaço de Medida):</b>considere \(X\) um conjunto qualquer e \(\mathcal{A}\) uma família de subconjuntos de \(X\). Dizemos que \(\mathcal{A}\)  forma uma \(\sigma\)—álgebra em \(X\) se i. \(X \in \mathcal{A}\), ii. \(A \in \mathcal{A} \Rightarrow A^c \in \mathcal{A}\) e iii. \(\bigcup_{i \in \mathbb{N}} A_i \in \mathcal{A}\), dado uma sequencia qualquer \(\{A_i\}_{i \in \mathbb{N}} \in \mathcal{A}\). Com efeito, dizemos que a função \(\mu: \mathcal{A} \rightarrow \overline{\mathbb{R}}_+\) trata-se de uma medida em \(X\) se i. \(\mu(A) \geq 0\), para todo \(A \in \mathcal{A}\), ii. \(\mu(\emptyset) = 0\) e iii. \(\mu \left(\bigcup_{i \in \mathbb{N}} A_i \right) \leq \sum_{i \in \mathbb{N}} \mu (A_i)\), dado novamente uma sequencia qualquer \(\{A_i\}_{i \in \mathbb{N}} \in \mathcal{A}\). Por fim, definimos um espaço de medida como a trinca \((X, \mathcal{A}, \mu)\).</p>
+        </div>
+
+        <p>Um espaco de medida de grande interesse para a mecanica quantica trata-se do espaço \(L^2(\mathbb{C}^n, \sigma, \mu)\). Note que, dado a função \(f \in L^2(\mathbb{C}^n, \sigma, \mu)\) qualquer, a norma
+            \[ ||f||_2 = \left( \int_\mathbb{R} |f(x)|^2 d \mu(x) \right)^\frac{1}{2}, \]
+            que é induzida pelo produto interno
+            \[ \braket{f,g} \doteq \int_X f (x)g^*(x) d \mu (x), \]
+            esta bem definida, i.e. \(||f||_2 < + \infty\), dado que \(f\) é \(\mu\)-mensuravel. Dada a definição que demos, coincide que o espaço \(L^2(\mathbb{C}^n, \sigma, \mu)\) trata-se de um espaço de Hilbert. Em particular, as funções de onda — notacionalmente referidas como \(\braket{x | \psi} = \psi(x)\) — são elementos destes espaços, i.e. \(\psi \in L^2 (\mathbb{C}^n, \sigma, \mu)\), o que garante que \(| \psi |^2\) sejam funções integráveis e que \(|| \psi ||_2 < + \infty\). Isso implica que tais funções são também vetores! Além disso, a medida \(\mu\) utilizada nesses espaços trata-se de uma medida de probabilidade, i.e. são tais que \(\mu: \sigma \rightarrow [0,1]\) e que \(\mu(\mathbb{C}^n) = 1\), posto que a mecânica quântica trata-se de uma teoria fundamentalmente probabilística, o que também implica que dado um auto-valor \(\lambda \in \mathbb{R}\), podemos apenas inferir a probabilidade de medirmos \(\lambda\), i.e. 
+        </p>
+
+        <div class="math">
+            <p><b>Exemplo 1.</b>  podemos encontrar uma  possível posição de um sistema que encontra-se em um estado \(\ket{\psi}\) aplicando o operador posição \(\hat{X}\) a este estado, i.e. \(\hat{X} \ket{\psi} = x \ket{\psi}\), onde \(x\) trata-se de um autovalor de \(\hat{X}\) e o estado \(\ket{\psi}\) do autovetor associado à \(x\). Já a probabilidade de encontrarmos tal partículas nessa posição é  
+                \[\braket{\psi | \hat{X} |\psi} = \int_\mathbb{R} x |\psi(x)|^2 d\mu(x)\]
+            </p>
+        </div>
+
+        <div class="math">
+            <p><b>Exemplo 2.</b> a energia \(E\) de um sistema em um dado estado \(\ket{\psi}\) trata-se do auto-valor do operador \(\hat{H} = -\dfrac{\hbar^2}{2m} \nabla^2 + V\), conhecido como Hamiltoniana, i.e. \(\hat{H} \ket{\psi} = E \ket{\psi}\). A probabilidade de encontrarmos nosso sistema com uma dada energia \(E\) é: 
+            \[\braket{\psi | \hat{H} | \psi} = \int_{\mathbb{R}} \psi^*(x)\left[ -\frac{\hbar^2}{2m} \nabla^2 + V \right] \psi(x)d\mu(x) = \int_\mathbb{R} E |\psi(x)|^2 d \mu (x)\]
+            </p>
+        </div>
+
+        <p>Deste modo, quando dizemos que medimos alguma quantidade associada a um sistema, nos referimos a estas quantidades, que podem ser formalmente computadas dentro da teoria, medidas por nossos aparatos e que não possuem nenhum cunho místico ou sobrenatural. Com isso, estamos aptos a discutir sobre o entrelaçamento quântico com o rigor necessário.</p>
+
+        <h2>
+            O Entrelaçamento Quântico
+        </h2>
+
+        <p>
+            Qualitativamente e no contexto da mecânica quântica — acredito que no contexto da teoria quântica de campos a ideia seja fundamentalmente a mesma —, o entrelaçamento quântico se trata de uma simples correlação entre observáveis de dois sistemas que surge do conceito de estados puros e de superposição. Formalmente, para entende-lo precisamos primeiramente entender o conceito de estados separáveis:
+        </p>
+
+        <div class="math">
+            <p><b>Definição (Estados Totalmente Separáveis):</b> considere dois sistemas \(A\) e \(B\) quaisquer e \(\ket{\psi_a} \in \mathcal{H}_a\) um estado puro qualquer de \(A\) e \(\ket{\psi_b} \in \mathcal{H}_b\) um estado puro qualquer de \(B\). Considere, ainda, o sistema \(AB\), que possui como subsistemas os sistemas \(A\) e \(B\). Então, definimos como um estado totalmente separável um estado puro do sistema \(AB\), que é dado pelo produto tensorial entre os estados puros de cada um de seus subsistemas, i.e. dado por \(\ket{\psi_{ab}} = \ket{\psi_a} \otimes \ket{\psi_b} \in \mathcal{H}_{ab}\), onde \(\mathcal{H}_{ab} = \mathcal{H}_a \otimes \mathcal{H}_b\) trata-se do espaço de Hilbert associado ao sistema \(AB\).</p>
+        </div>
+
+        <p>
+            Estados totalmente separáveis mantém a individualidade nas medições realizadas em cada um de seus subsistemas, i.e. não há qualquer correlação entre as medidas realizadas nos subsistemas \(A\) e \(B\), e o conceito de entrelaçamento quântico surge de estados que não são totalmente separáveis. Para entender isso tome \(\ket{\psi_a},\ket{\phi_a} \in \mathcal{H}_a\)  possíveis estados (puros) para \(A\) e \(\ket{\psi_b}, \ket{\phi_b} \in \mathcal{H}_b\) possíveis estados (também puros) para \(B\). Usando o principio da superposição, podemos construir um outro estado puro para o sistema \(AB\) que seja uma combinação linear dos dois estados puros (e totalmente separáveis) \(\ket{\psi_a} \otimes \ket{\psi_b}\) e \(\ket{\phi_a} \otimes \ket{\phi_b}\), na forma \(\ket{\xi} = \frac{1}{\sqrt{2}} \left( \ket{\psi_a} \otimes \ket{\psi_b} + \ket{\phi_a} \otimes \ket{\phi_b} \right)\). Claramente \(\ket{\xi}\) não pode ser escrito na forma de "estado de \(A\)" $\otimes$ "estado de \(B\)", o que implica que o mesmo não se trata de um estado totalmente separável, o que, por sua vez, implica que os subsistemas de  \(AB\) estão agora correlacionados, i.e. medidas feitas em \(A\) se correlacionam com medidas feitas em \(B\)  e vice-versa. 
+        </p>
+
+        <p>
+            Para ilustrar minha ultima afirmação, note que se realizarmos uma medida no subsistema $A$ e obtermos o estado \(\ket{\psi_a}\), isso implicará que o sistema \(B\) está obrigatoriamente no estado \(\ket{\psi_b}\), posto que ambos formam um estado (puro) \(\ket{\psi_a} \otimes \ket{\psi_b}\) do sistema \(AB\). O entrelaçamento quântico, grosso modo, trata-se justamente dessa correlação entre as medidas feitos em dois subsistemas que compõe um sistema ainda maior. Para finalizarmos esta seção, considere o exemplo (clássico) usado para ilustrar o entrelaçamento quântico: considere um sistema composto por dois subsistemas constituídos por elétrons, que se encontram no estado entrelaçado
+            \[ \ket{\psi} = \frac{1}{\sqrt{2}} \left( \ket{\uparrow} \otimes \ket{ \downarrow} + \ket{\downarrow} \otimes \ket{ \uparrow} \right) \]
+            sendo cada estado referente ao spin de nossos elétrons (up ou down) e onde não há a possibilidade de termos os estados \(\ket{\uparrow} \otimes \ket{\uparrow}\) e \(\ket{\downarrow} \otimes \ket{\downarrow}\) devido ao principio de exclusão de Pauli. Suponha que um de nossos elétrons seja levado para o Rio de Janeiro e o outro para Roraima. Antes de realizarmos qualquer medida, ambos os elétrons possuem uma probabilidade de $50\%$ de estarem em qualquer um dos estados possíveis. Agora, suponha que um observador realiza uma medida no elétron de Roraima e descobre que ele encontra-se no estado \(\ket{\uparrow}\). Isso implica que o segundo elétron, aquele localizado no Rio de Janeiro, deve estar obrigatoriamente no estado \(\ket{\downarrow}\), i.e. a probabilidade deste elétron estar neste estado agora é de \(100\%\), o que significa que existe uma correlação entre os estados de ambos os elétrons que tem origem no passado comum de ambos.
+        </p>
+
+        <h2>Comentarios Finais</h2>
+
+        <p>
+            Como eu acredito que tenha ficado evidente, não há nenhum mecanismo de ação à distancia ou qualquer outro fenômeno de natureza sobrenatural ou mística agindo em nossos subsistema; em realidade, não há nada sequer um agente físico agindo nestes. O entrelaçamento quântico de fato se trata de um assunto que não é de fácil compreensão, o que por si só já seria o suficiente para que houvessem muitos desentendimentos a respeito do mesmo, entretanto acredito que uma divulgação e comunicação cientificas conduzidas sem um mínimo rigor teórico seja uma das maiores causas para o crescimento da mistificação deste — e de outros — conceitos da mecânica quântica. Claramente — e como mencionado no inicio do post — este não se trata do único fator contribuindo para este crescimento, posto que a formação de crenças — não somente em pseudociências, no sobrenatural ou na propria ciência, mas de modo geral — trata-se de um conceito complexo por si só e que requer a contribuição de diversas áreas do conhecimento humano, como as ciências cognitivas, a sociologia, a historia, a filosofia e etc., entretanto destaquei esta pois ela ataca um ponto o qual eu raramente vejo sendo atacado: o rigor teórico — frente a ciencia divulgada, e não a área de divulgação e comunicação cientifica em si — de comunicadores e divulgadores científicos. Estes que, na tentativa de atingir um publico mais amplo, acabam por vezes super simplificando — muitas vezes através analogias objetivamente erradas ou extremamente reducionistas — alguns conceitos cientificos extremamente complexos e delicados e isso, muitas vezes, acaba gerando certa confusão à respeito destes mesmos conceitos. Acredito que a ciência deva chegar sim a mais pessoas, mas da maneira correta. Além de respeitar as individualidades (diferenças sociais, culturais e etc) de seus ouvintes, manter um mínimo rigor no momento de passar a informação e evitar o sensacionalismo também são fundamentais nesse processo.
+        </p>
+
+
+
+
+
+        </div>
+    </main>
+
+
+    <footer>
+        <div id="foot_content">
+            <div id="footer-contacts">
+                <h1>A Quanta of Philosophy</h1>
+                <div id="social_media">
+                    <a href="#" class="footer_link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer_link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="footer_link"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <div class="footer_list">
+                    <ul>
+                        <li>
+                            <a href="#" class="footer_link"> Lattes </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer_link"> Orchid </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer_link"> Arxiv </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footercopy">
+                <p>Copyright &copy;2023; Designed by Gustambeira </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
