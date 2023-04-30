@@ -111,6 +111,7 @@ section {
 
 #frontcover {
     display: flex;
+    width: 100%;
 }
 
 .sec h1 {
