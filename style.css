@@ -81,7 +81,7 @@ nav {
 }
 
 main {
-    background-color: #262631;
+    background-color: #23232e;
 }
 
 @keyframes navLinkFade {
@@ -97,7 +97,7 @@ main {
 
 .sec {
     position: relative;
-    background: #5b5b65;
+    background: #23232e;
     padding: 100px;
 
 }
