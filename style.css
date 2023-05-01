@@ -249,8 +249,9 @@ footer {
 
 .blog-box {
     width: 350px;
-    background-color: #23232e;
+    background-color: #5b5b65;
     border: 1px solid #5b5b65;
+    margin: 20px
 }
 
 .blog-img {
