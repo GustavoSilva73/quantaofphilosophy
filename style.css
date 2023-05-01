@@ -245,6 +245,7 @@ footer {
     align-items: center;
     margin: 20px 0px;
     flex-wrap: wrap;
+    background-color: #5b5b65;
 }
 
 .blog-box {
