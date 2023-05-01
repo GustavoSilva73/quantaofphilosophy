@@ -100,7 +100,8 @@ main {
 .sec {
     position: relative;
     background: #23232e;
-    padding: 100px;
+    padding: 125px;
+    height: fit-content;
 
 }
 
