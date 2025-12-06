@@ -1,348 +1,166 @@
-*{
+/* --- Estilos Gerais (Minimalista / LaTeX) --- */
+body {
+    /* Fonte Clássica e Limpa: Prioriza uma fonte Serif (como a do LaTeX) */
+    font-family: 'Times New Roman', 'Georgia', serif; 
+    line-height: 1.65; /* Aumento do espaçamento para melhor leitura */
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    background-color: #ffffff; /* Fundo branco puro (papel) */
+    color: #1e1e1e; /* Preto suave (tinta) */
+    font-size: 1.1rem; /* Fonte um pouco maior para conforto */
 }
 
+.container {
+    width: 90%;
+    max-width: 800px; /* Largura estreita para simular coluna de texto de artigo */
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
 
 a {
-    color: white;
+    color: #0077b6; /* Azul formal, mas não vibrante */
     text-decoration: none;
-    transition: 0.3s;
+    border-bottom: 1px solid #c9c9c9; /* Sublinhado discreto */
+    transition: color 0.3s;
 }
 
 a:hover {
-    opacity: 0.7;
+    color: #005f91;
+    border-bottom: 1px solid #005f91;
 }
 
-.logo {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
+/* --- Cabeçalho (Header) - Simples e Sem Distrações --- */
+header {
+    background: #ffffff;
+    padding: 2rem 0;
+    border-bottom: 1px solid #e0e0e0; /* Linha divisória fina */
+    margin-bottom: 30px;
 }
 
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #23232e;
-    height: 8vh;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 400; /* Fonte mais leve, não muito pesada */
+    text-align: center;
 }
 
-.nav-list {
+header nav {
+    text-align: center;
+    margin-top: 15px;
+}
+
+header nav ul {
     list-style: none;
-    display: flex;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
-}
-.mobile-menu {
-    display: none;
-    cursor: pointer;
-}
-.mobile-menu div {
-    width: 32px;
-    height: 2px;
-    background: #fff;
-    margin: 8px;
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-@media (max-width: 999px) {
-    body {
-        overflow-x: hidden;
-    }
-    .nav-list {
-        position: absolute;
-        top: 8vh;
-        right: 0;
-        width: 50vw;
-        height: 92vh;
-        background: #23232e;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
-    .nav-list li {
-        margin-left: 0;
-        opacity: 0;
-    }
-    .mobile-menu {
-        display: block;
-    }
+header nav a {
+    color: #444;
+    font-size: 1rem;
+    text-transform: none; /* Sem letras maiúsculas forçadas */
+    border-bottom: none;
 }
 
-.nav-list.active {
-    transform: translateX(0);
+header nav a:hover {
+    color: #0077b6;
+}
+
+/* --- Conteúdo Principal e Layout (Main Content) --- */
+.main-content {
+    display: block; /* Remove o layout de duas colunas, focando apenas no conteúdo */
+    padding: 0;
 }
 
 main {
-    background-color: #23232e;
-    background-size: cover;
-    height: auto;
+    width: 100%; /* Ocupa a largura total do container */
 }
 
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.sidebar {
+    display: none; /* Remove a barra lateral para um minimalismo extremo */
 }
 
-.sec {
-    position: relative;
-    background: #23232e;
-    padding: 125px;
-    height: fit-content;
-
+/* --- Estilo dos Posts (Articles) - Foco Total no Texto --- */
+.post {
+    padding: 0;
+    margin-bottom: 40px;
+    border: none;
+    box-shadow: none;
 }
 
-section {
-    position: relative;
-    overflow-x: hidden;
-    height: 85vh;
-    background-color: #23232e;
+.post h2 {
+    color: #1e1e1e;
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: none;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
-#frontcover {
-    display: flex;
-    width: 100%;
-}
-
-.sec h1 {
-    font-size: 3.5em;
-    margin-bottom: 15px;
-    color: #fff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.sec p {
-    text-align: justify;
-    font-size: 1.6em;
-    color: #fff;    
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-/*Footer*/
-
-footer {
-    width: 100%;
-    color: #fff;
-    background-color: #23232e;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-#footer_content {
-    background-color: #5b5b65;
-    display: grid;
-    padding: 3rem 3.5rem;
-}
-
-#footer-contacts {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-}
-
-#footer-contacts h1 {
-    margin-bottom: 0.75rem;
-}
-
-#social_media {
-    display: flex;
-    justify-content: center;
-    font-size: 26px;
-    gap: 2rem;
-    margin-top: 2.5rem;
-}
-
-#social_media .footer_link {
-    display: grid;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 50%;
-    background-color: #eeeae7;
-}
-
-#social_media a i{
-    font-size: 1.25em;
-    color: #23232e;
-    opacity: 0.9;
-}
-
-#social_media a:hover {
-    background-color: #23232e;
-    transition: 0.5s;
-}
-
-#social_media a:hover i{
-    background-color: #eeeae7;
-    transition: 0.5s;
-}
-
-.footer_list {
-    margin: 30px 0;
-}
-
-.footer_list ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-.footer_list ul li a{
-    color: #eeeae7;
-    margin: 20px;
-    text-decoration: none;
-    font-size: 1.3em;
-    opacity: 0.7;
-    transition: 0.5s;
-}
-
-.footer_list ul li a:hover {
-    opacity: 1;
-}
-
-/* Blog */
-
-#blog {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px;
-    border-bottom: 1px solid #262631;
-}
-
-.blog-heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.blog-heading span {
-    color: #23232e;
-    font-size: 28px;
-}
-
-.blog-heading h3 {
-    color: #eeeae7;
-    font-size: 48px;
-}
-
-.blog-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    flex-wrap: wrap;
-}
-
-.blog-box {
-    width: 350px;
-    background-color: #5b5b65;
-    margin: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.blog-img {
-    width: 100%;
-    height: auto;
-}
-
-.blog-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-
-.blog-text {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-}
-
-.blog-text .blog-title {
-    font-size: 1.7rem;
-    font-weight: 500;
-    color: #eeeae7;
-}
-
-.bloh-text .blog-title:hover {
-    color: #5b5b65;
-    transition: all ease 0.3s;
-}
-
-.blog-text p {
-    color: #fff;
-    font-size: 1rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    margin: 20px 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.blog-text a {
-    color: #5b5b65;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.blog-text a:hover {
-    color: #23232e;
-    transition: all ease 0.3s;
-}
-
-.blog-text span{
-    color: #fff;
-    font-size: 1em;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-#blog-posts {
+.post-meta {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
     display: block;
-    justify-content: center;
-    padding: 40px;
 }
 
-#blog-posts h1 {
-    color: #ddd1c7;
-    font-size: 2em;
-    margin-bottom: 10px;
-    align-items: justify;
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 0;
+    background-color: transparent;
+    color: #0077b6 !important;
+    border: none;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
 }
 
-#blog-posts h2 {
-    color: #ddd1c7;
-    font-size: 1.7em; 
-    margin-bottom: 10px;
-    margin-top: 5px;
+.read-more:hover {
+    color: #005f91 !important;
 }
 
-#blog-posts p {
-    text-align: justify;
-    font-size: 1.4em;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    color: #fff;    
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+/* --- Estilo Específico para MathJax (Destaque limpo) --- */
+.math-equation {
+    padding: 15px;
+    background-color: #f7f7f7; /* Fundo cinza muito claro */
+    border: 1px solid #eeeeee;
+    margin: 30px 0;
+    text-align: center;
+    overflow-x: auto;
+    font-size: 1.1em;
 }
 
-.math {
-    background-color: #5b5b65;
-    padding: 20px;
-    box-shadow: 3px 3px 2px #eeeae7;
-    border-radius: 4px;
+p:first-letter {
+    margin-left: 2em;
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background: #f7f7f7;
+    color: #777;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 50px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+}
+
+/* --- Responsividade (Mantendo o Minimalismo) --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header nav ul li {
+        margin: 0 8px;
+    }
 }
